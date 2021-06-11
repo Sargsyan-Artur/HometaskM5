@@ -38,9 +38,5 @@ describe('test calculate function', function () {
             const space = calculator.multiply();
             expect(space).to.equal(0);
         });
-        // it('invalid operator', function () {
-        //     const operation = calculator.calculate;
-        //     expect(() => operation('4', '++', '5')).to.throw('one of the parameters is not correct');
-        // });
     });
 });
