@@ -1,11 +1,7 @@
 class Calculator {
-    constructor(...values) {
-        this.values = values;
-    };
-
-    add() {
+    add(...values) {
         let sum = 0;
-
+        this.values = values
         for (let i of this.values) {
             if (typeof i === 'number') {
                 sum = sum + i
@@ -16,7 +12,8 @@ class Calculator {
         return sum
     };
 
-    multiply () {
+    multiply (...values) {
+        this.values = values
         if((this.values).length === 0) return 0
         let res = 1
         for (let i of this.values) {
@@ -31,8 +28,3 @@ class Calculator {
 }
 
 module.exports = Calculator
-// let calculator = new Calculator(5,"z",5,5)
-// let add = calculator.add()
-// let multiply = calculator.multiply()
-// console.log(add)
-// console.log(multiply)
